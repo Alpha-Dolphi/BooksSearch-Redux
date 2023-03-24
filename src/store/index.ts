@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux'
 import { bookSlice } from './book';
-import logger from "redux-logger";
 import Book from './book/bookInterfaces';
 import { LoadingStatuses } from '../constants/loadingStatuses';
 
@@ -21,7 +20,7 @@ const store = configureStore({
     book: bookSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({ serializableCheck: false }).concat(logger),
+    getDefaultMiddleware({ serializableCheck: false }),
 })
 export type RootState = ReturnType<typeof store.getState>
 
