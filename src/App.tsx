@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BookCategory, SortingOption } from "./constants/statesEnums";
+import BookDetailsPage from "./pages/BookDetailsPage/BookDetailsPage";
+import BooksListPage from "./pages/BooksListPage/BooksListPage";
+import NotFound from "./pages/NotFound/NotFound";
+import store from "./store";
 
-function App() {
+const App = () => {
+  const [sortingOption, setSortingOption] = useState<SortingOption>(SortingOption.Relevance);
+  const [value, setValue] = useState<string>("");
+  const [category, setCategory] = useState<BookCategory>(BookCategory.All);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Provider store={store}>
+            <Routes>
+              <Route index path="/" element={<BooksListPage  value={value} setValue={setValue} category={category} setCategory={setCategory} sortingOption={sortingOption} setSortingOption={setSortingOption}/>}></Route>
+              <Route index path="/:bookId" element={<BookDetailsPage value={value} setValue={setValue} category={category} setCategory={setCategory} sortingOption={sortingOption} setSortingOption={setSortingOption}/>}></Route>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+      </Provider>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
