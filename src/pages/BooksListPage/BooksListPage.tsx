@@ -21,7 +21,7 @@ const BooksListPage: React.FC<SearchProps> = ({value, setValue, category, setCat
 
   useEffect(() => {
     dispatch(reset())
-  }, [sortingOption]);
+  }, [sortingOption, value, category]);
 
   useEffect(() => {
     dispatch(fetchBooks({
@@ -29,22 +29,11 @@ const BooksListPage: React.FC<SearchProps> = ({value, setValue, category, setCat
       searchQuery: value ? value : "{}",
       startIndex: startIndex,
       maxResults: maxResults,
+      category: category,
     } as searchQueryParameters));
-  }, [startIndex, sortingOption]);
+  }, [startIndex, sortingOption, value, category]);
 
   const books = useSelector(selectBookEntities);
-
-  const filterdBooks = Object.values(books)
-  .filter(book => {
-    const matchesSearchTerm = book.volumeInfo.title.includes(value);
-    const matchesCategory = category === "all" || book.volumeInfo.categories?.some(str => str.includes(category));
-    return matchesSearchTerm && matchesCategory;
-  })
-  .reduce((obj : Record<string, Book>, book) => {
-    obj[book.id] = book;
-    return obj;
-  }, {});
-
 
   return (
         <div className={styles.content}>
@@ -54,7 +43,7 @@ const BooksListPage: React.FC<SearchProps> = ({value, setValue, category, setCat
               <h2>Found {totalItems ? totalItems : 0} results</h2>
             </div>
 
-            <BooksList books={filterdBooks}/>
+            <BooksList books={books}/>
             <div className={styles.loading_indicator}>
               {isLoading ? <h2>Loading Books..</h2> : ""}
             </div>

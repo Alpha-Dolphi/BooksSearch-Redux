@@ -11,10 +11,9 @@ import searchQueryParameters from "./bookInterfaces";
 
 export const fetchBooks = createAsyncThunk(
   "book/fetchBooks",
-  async ({sortingOption, searchQuery, startIndex, maxResults}: searchQueryParameters, { rejectWithValue }) => {
-    let prevSortingOption = sortingOption
+  async ({sortingOption, searchQuery, startIndex, maxResults, category}: searchQueryParameters, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${(window as any).API_URL}?q=${searchQuery}&startIndex=${startIndex}&maxResults=${maxResults}&orderBy=${sortingOption}&key=${(window as any).API_KEY}`);
+      const response = await axios.get(`${(window as any).API_URL}?q=${searchQuery}+subject:${category}&startIndex=${startIndex}&maxResults=${maxResults}&orderBy=${sortingOption}&key=${(window as any).API_KEY}`);
       return await response.data;
     } catch (error) {
       return rejectWithValue({ error });
