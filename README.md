@@ -1,7 +1,6 @@
 <h1 align="center">Welcome to Books Search App 👋</h1>
 
-![npm version](https://img.shields.io/badge/npm-v9.6.2-blue)
-![TypeScript version](https://img.shields.io/badge/TypeScript-v5.0.2-green)
+![TypeScript version](https://img.shields.io/badge/TypeScript-v5.0.2-blue)
 ![React version](https://img.shields.io/badge/React-v18.2.0-orange)
 ![React-Redux Version](https://img.shields.io/badge/React--Redux-v8.0.5-purple)
 
