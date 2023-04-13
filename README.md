@@ -3,7 +3,7 @@
 ![npm version](https://img.shields.io/badge/npm-v9.6.2-blue)
 ![TypeScript version](https://img.shields.io/badge/TypeScript-v5.0.2-green)
 ![React version](https://img.shields.io/badge/React-v18.2.0-orange)
-![react-redux version](https://img.shields.io/badge/react-redux-v8.0.5-purple)
+![react-redux version](https://img.shields.io/badge/redux-v8.0.5-purple)
 
 ---
 
