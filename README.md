@@ -1,27 +1,53 @@
-To run a project / Чтобы запустить проект
+<h1 align="center">Welcome to Books Search App 👋</h1>
 
-### `npm install react-scripts@5.0.1 --legacy-peer-deps`
+![npm version](https://img.shields.io/badge/npm-v9.6.2-blue)
+![TypeScript version](https://img.shields.io/badge/TypeScript-v5.0.2-green)
+![React version](https://img.shields.io/badge/React-v18.2.0-orange)
+![react-redux version](https://img.shields.io/badge/react-redux-v8.0.5-purple)
 
-### `npm start`
+---
 
-Live version of the project: https://incredible-rabanadas-dc4f47.netlify.app/
+> A simple to use Books Search App created with React, TypeScript, Redux Toolkit and Axios powered by Google Books API. This is a testing task for a company CaseGuru. The requirements for this task can be found [here](https://github.com/fugr-ru/frontend-javascript-test-2).
 
-Project Name: Book Search App
+## Main Features
 
-Project Description: A web application that allows users to search for books by keyword, sorting option, and other parameters. The application uses the Google Books API to retrieve book data, and displays results in a paginated list with book cover images, title, author, and other details. Users can also click on a book to view more details and purchase options.
+- **Search**: You can search for books by keyword, sorting option, and other parameters.
+- **Results**: A paginated list of search results will be displayed with book cover images, title, author, and other details.
+- **Book Details**: You can click on a book to view more details, such as the book description, reviews, and related books.
 
-Main Features:
+## Preview
 
-Search for books by keyword, sorting option, and other parameters
-Display paginated list of search results with book cover images, title, author, and other details
-Click on a book to view more details
-Technologies Used: React, TypeScript, Redux Toolkit, Axios, Google Books API
+### ✨ [Live Demo](https://incredible-rabanadas-dc4f47.netlify.app/)
 
-Target Audience: Anyone who wants to search for books online, including avid readers, book enthusiasts, and students/researchers who need to find books on specific topics.
+Here's a preview of my project in action:
 
-Goals of the Project:
+![Screenshot of my project](https://lh3.googleusercontent.com/v8J3J-M5cCMl4qugg-Ovp3Br3FoSdcIWcrc2VmHa-fmdxg2nJMFtEHHQ6yuKmkXjmoZ8FnHB8rVZaJH-_Pf01Wp_rwH2Fp3BHisaIAXOq-mF4NlCnY-Sudiso3sawzS0vZGD-uIJZvwFXCpt3uowvFDY8akmWZRBSjWvGUcNVauvLew_tdcJEXMN-TmnUgf53lxROVXO6T8-O0EGhwE6XGaHPiAlMH4MA4-kMsz3_zWNbBvwJ6V4vxHXSLU_5lhpZws17egXQRnLzcIAL8hw_ynREm0mlTxPbUhbnBonhgMDhaxjmitrvcJTfKhBsv_CnpsXM2baCMRErXNHX6fagYkEJ0w4LLQDa0VW2yvlSXBFUOTNqCC82AQI6BmGG96GRUO5D3OOkzxonA-9sJi8b67HPwxLO_27VVogI-ZQkSiStQjyyE590ukVPxrdulrD3UncVdzAGlCWI0qC0WhqSkkGBw438eaLMy94I7xGlscOXnupydmRegIqM2baJMm8blRo-GlP_L46d75-k9P8l-Xw9O1Uy2uV9VPxm2-ZmyWUmR32-N3wwL4plzjYNRm13I-g75PoxJhKMAd7VOYjLxcBQYq9a0oEtY9u18vTM-nY4ABgbBk3B9J9-ZKgzTKQKAtdsLYF9RQikrT42FXaphDoSO8pR7Rl9iPU4pIxaW1Ayhb8r00j1ab-QPgKpF7_vGw-1A13waxUWwm0SALXl5R8EX-7eK5VWq-7dgtPMV81jttEUs8fkIOQAzH25wBfORSR7yNG07qgEWG6o0vqUt2eXi1tGndIpSgc0Rg6JbobJEVumAhgAUg6x9t8LVLV9rvonfpi2fr0jNWNEIGlkAOuBkExzKw3tEfUmbWHvE0uh_i9KsgdDrqyOXGBdgppBLw0ZPKWnSJfeS48mETSzmbXZRqokpbmTieA3F7z5CuHpQn_CadcB4P-kWXp9SWpbce4aM1rykg7tyeBvjtg=w1147-h777-s-no?authuser=0)
 
-Provide a user-friendly and efficient way for users to search for books online
-Retrieve accurate and relevant search results from the Google Books API
-Display book details and purchase options in an easy-to-read and informative manner
-Allow users to customize search parameters and sorting options to find the books they need more quickly and easily.
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
+
+## Run tests
+
+```sh
+npm run test
+```
+
+## Author
+
+👤 **Bogdan**
+
+* Website: https://effulgent-brigadeiros-8b54e7.netlify.app/
+* Github: [@Alpha-Dolphi](https://github.com/Alpha-Dolphi)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
